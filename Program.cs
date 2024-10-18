@@ -10,10 +10,10 @@ class Program
 
         for (int i = 0; i < daysInWeek; i++)
         {
-            Console.Write($"Kérem, adja meg a(z) {i + 1}. napi hőmérsékletet (°C): ");
+            Console.Write($"Adja meg a(z) {i + 1}. napi hőmérsékletet (°C): ");
             while (!double.TryParse(Console.ReadLine(), out temperatures[i]))
             {
-                Console.WriteLine("Kérlek, érvényes hőmérsékletet adj meg!");
+                Console.WriteLine("Érvényes hőmérsékletet adj meg!");
             }
             sum += temperatures[i];
         }
@@ -40,7 +40,6 @@ class Program
         Console.WriteLine($"A hét átlaghőmérséklete: {averageTemperature:F2} °C");
         Console.WriteLine($"A legmelegebb nap hőmérséklete: {maxTemperature} °C");
         Console.WriteLine($"A leghidegebb nap hőmérséklete: {minTemperature} °C");
-
 
         if (hasFrostDay)
         {
